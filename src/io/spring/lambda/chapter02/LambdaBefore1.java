@@ -1,6 +1,7 @@
 package io.spring.lambda.chapter02;
 
 import java.util.ArrayList;
+import java.util.Comparator;
 import java.util.List;
 
 public class LambdaBefore1 {
@@ -18,8 +19,11 @@ public class LambdaBefore1 {
         inventory.add(apple1);
         inventory.add(apple2);
 
+        // 1단계
         List<Apple> redApples = filterRedApples(inventory);
         List<Apple> greenApples = filterGreenApples(inventory);
+
+        // 2단계
         List<Apple> greenApples2 = filterApplesByColors(inventory, Color.GREEN);
         List<Apple> heavyApples = filterApplesByWeight(inventory, 150);
 
@@ -73,5 +77,7 @@ public class LambdaBefore1 {
         return appleList;
     }
 
-
 }
+
+
+
